@@ -1,73 +1,172 @@
-# House Price Prediction — Machine Learning Project
+# California Housing Price Prediction
+End-to-End Machine Learning Regression Project
+# 📌 Project Overview
 
-## Project Overview
-This project aims to predict house prices using regression techniques.  
-We used the **California Housing Dataset** and applied both **Linear Regression** and **Random Forest Regression** to model the data.
+This project predicts median house prices in California using advanced regression techniques.
+Beyond prediction, it provides data-driven insights into the key economic, geographical, and housing factors that influence real estate prices.
 
----
+The project demonstrates a complete, production-ready machine learning workflow, from data exploration to model tuning and explainability.
 
-## Dataset
-- Source: [California Housing Dataset (scikit-learn)](https://scikit-learn.org/stable/datasets/real_world.html#california-housing-dataset)
-- Rows: 20640
-- Columns: 9 features + 1 target (`MedHouseVal`)
-- Features: 
-  - MedInc: median income
-  - HouseAge: median house age
-  - AveRooms, AveBedrms, Population, AveOccup, Latitude, Longitude
-- Target: Median House Value (`MedHouseVal`)
+# Business Objectives
 
----
+Predict house prices accurately across California regions
 
-## Exploratory Data Analysis (EDA)
-- Checked first few rows with `df.head()`
-- Dataset info and statistics with `df.info()` and `df.describe()`
-- Checked target distribution (histogram)
-- Checked missing values (none)
-- Correlation analysis (heatmap) to understand feature relationships
+Identify the most influential pricing drivers
 
----
+Support real estate investment and urban planning decisions
 
-## Feature Engineering
-- No missing values in this dataset
-- Input features (`X`) separated from target (`y`)
-- Train-test split: 80% training, 20% testing
+Build an interpretable and robust regression pipeline
 
----
+# Dataset
 
-## Models Used
+Source: Scikit-learn California Housing Dataset
 
-### 1. Linear Regression
-- Simple linear model
-- Fit on training data
-- Predictions on test data
-- Evaluation:
-  - MSE = XXX
-  - R² = XXX
+Rows: 20,640
 
-### 2. Random Forest Regression
-- Ensemble method
-- Handles non-linear relationships
-- Predictions on test data
-- Evaluation:
-  - MSE = XXX
-  - R² = XXX
+Target Variable: MedHouseVal (Median House Value)
 
----
+Features include:
 
-## Evaluation
-| Model              | MSE     | R² Score |
-|------------------|---------|---------|
-| Linear Regression | XXX     | 0.5    |
-| Random Forest     | XXX     | 0.8    |
+Median Income (MedInc)
 
-> Random Forest performed better than Linear Regression as it captured non-linear patterns and achieved higher R².
+House Age (HouseAge)
 
----
+Rooms, Bedrooms, Population, Occupancy
 
-## Conclusion
-- Random Forest is more effective for predicting house prices in this dataset
-- Model can be used for further experimentation, hyperparameter tuning, or feature selection
-- Good first regression project for ML portfolio
+Latitude & Longitude (geographical context)
 
----
+# Tools & Technologies
 
+Python
+
+Pandas, NumPy
+
+Scikit-learn
+
+Matplotlib, Seaborn
+
+Jupyter Notebook
+
+# Project Structure
+
+CALIFORNIA-HOUSING-PREDICTION/
+
+├── data/
+
+│   └── california_housing_processed.csv
+
+├── California_Housing_Price_Intelligence.ipynb
+
+├── California_Housing_Model_Training.ipynb
+
+├── California_Housing_Explainability.ipynb
+
+├── README.md
+
+
+# Exploratory Data Analysis (EDA)
+
+Key analyses performed:
+
+Target variable distribution analysis
+
+Feature correlation heatmap
+
+Income vs house price relationships
+
+Geographical price distribution
+
+Skewness and density patterns
+
+# 📌 Key Insight
+
+Median income and coastal proximity strongly influence house prices.
+
+# 🧩 Feature Engineering
+
+Business-driven features were created to capture housing dynamics:
+
+RoomsPerHousehold → Comfort & luxury indicator
+
+BedroomsRatio → Space efficiency
+
+PopulationPerHousehold → Congestion measure
+
+IncomeCategory → Market segmentation (Low → Very High)
+
+One-hot encoding for categorical variables
+
+# Model Training & Evaluation
+Models Trained:
+
+Linear Regression
+
+Random Forest Regressor
+
+Gradient Boosting Regressor
+
+Cross-Validation:
+
+5-fold cross-validation used to ensure model stability
+
+Hyperparameter Tuning:
+
+GridSearchCV applied to Random Forest for optimal performance
+
+# 📈 Model Comparison
+
+| Model             | R² Score  | RMSE      |
+| ----------------- | --------- | --------- |
+| Linear Regression | 0.655     | 0.673     |
+| Random Forest     | **0.806** | **0.504** |
+| Gradient Boosting | 0.779     | 0.538     |
+
+Final Model: Random Forest Regressor
+
+Chosen for its:
+
+Strong predictive performance
+
+Ability to capture non-linear patterns
+
+Robustness across cross-validation folds
+
+#  Model Explainability
+
+Feature importance analysis
+
+Prediction error distribution
+
+Geographical visualization of predicted prices
+
+# Key Drivers of House Prices
+
+Median income
+
+Coastal location (Latitude & Longitude)
+
+Housing density & room distribution
+
+# Business Recommendations
+
+Investors should prioritize high-income coastal regions
+
+Urban planners can monitor congestion using density metrics
+
+Developers can design housing based on room efficiency insights
+
+# Conclusion
+
+This project demonstrates:
+
+A complete regression ML lifecycle
+
+Strong alignment between data science and business insights
+
+Real-world applicability in real estate and investment domains
+
+👩‍💻 Author
+
+Aqsa Abbasi
+Machine Learning | AI
+Actively transitioning into applied  AI roles
